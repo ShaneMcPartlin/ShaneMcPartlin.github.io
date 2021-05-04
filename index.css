@@ -2,11 +2,8 @@
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
   background-image: -webkit-linear-gradient(316deg, #3BD2AE 0%, #36BAC2 100%);
   background-image: linear-gradient(-226deg, #3BD2AE 0%, #36BAC2 100%);
-  /* color: #ededed; */
-  /* background-color: #1e1e1e; */
 }
 
 a {
@@ -17,22 +14,6 @@ a:hover {
   color: #020074 !important;
 }
 
-html {
-  color: #ededed;
-  background-color: #1e1e1e !important;
-}
-
-img {
-  height: 500px;
-}
-
-.banner {
-  background-repeat: no-repeat;
-  background-size: auto;
-  max-height: 200px;
-  object-fit: cover;
-}
-
 .name-text {
   font-size: 72px;
   font-family: "Lobster";
@@ -41,26 +22,6 @@ img {
 .subtitle {
   font-size: 56;
 }
-
-/* .border-blue {
-  border: 1px solid blue;
-  margin: 3px;
-}
-
-.border-red {
-  border: 1px solid red;
-  margin: 3px;
-}
-
-.border-green {
-  border: 1px solid lime;
-  margin: 3px;
-}
-
-.border-yellow {
-  border: 1px solid yellow;
-  margin: 3px;
-} */
 
 .flex-row {
   display: flex;
@@ -75,28 +36,6 @@ img {
 .centered {
   margin: auto;
   text-align: center;
-}
-
-audio {
-  height: 30px;
-}
-
-.hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1533757879476-8f4a3cb1ae4b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2767&q=80");
-  height: 200px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-.hero-text {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
 }
 
 .full-width {
@@ -116,9 +55,9 @@ audio {
 }
 
 body {
-  background-image: -webkit-linear-gradient(316deg, #3BD2AE 0%, #36BAC2 100%);
-  background-image: linear-gradient(-226deg, #3BD2AE 0%, #36BAC2 100%);
-  height: 100vh;
+  height: 100%;
+  background-image: -webkit-linear-gradient(316deg, #3BD2AE 0%, #36BAC2 100%) !important;
+  background-image: linear-gradient(-226deg, #3BD2AE 0%, #36BAC2 100%) !important;
   -webkit-font-smoothing: antialiased;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   line-height: 1.5;
