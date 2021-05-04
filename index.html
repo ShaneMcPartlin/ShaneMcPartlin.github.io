@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>AmplitudeJS Player</title>
+    <script type="text/javascript" src="player/amplitude.min.js"></script>
+    <script type="text/javascript" src="player/michaelbromley.js"></script>
+    <link rel="stylesheet" type="text/css" href="player/player.css" />
+    <style>
+        body {
+            background-image: -webkit-linear-gradient(316deg, #3BD2AE 0%, #36BAC2 100%);
+            background-image: linear-gradient(-226deg, #3BD2AE 0%, #36BAC2 100%);
+            height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+            line-height: 1.5;
+        }
+    </style>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.1/css/foundation-float.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Lobster&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+      <div class="flex-col border-green">
+        <h1 class="centered name-text">Shane McPartlin, Voice Actor</h1>
+        <div class="flex-row centered">
+          <div class="contact-info">
+            <img class="icon" src="https://pinkeyegraphics.co.uk/wp-content/uploads/gmail-new-icon.ico">
+            <a href="mailto:mcpartlin.shane@gmail.com">mcpartlin.shane@gmail.com</a>
+          </div>
+          <div class="contact-info">
+            <img class="icon" src="https://openvisualfx.com/wp-content/uploads/2019/10/pnglot.com-twitter-bird-logo-png-139932.png">
+            <a href="https://twitter.com/ShaneMcPartlin">@ShaneMcPartlin</a>
+          </div>
+        </div>
+      </div>
+
+    <!-- Start Amplitude Player -->
+    <div id="blue-playlist-container">
+        <div id="amplitude-player">
+            <div id="amplitude-left">
+                <noscript>Javascript is required for this content.</noscript>
+                <div class="art-container">
+                    <img data-amplitude-song-info="cover_art_url" class="album-art" id="album-art" />
+                    <div class="amplitude-visualization" id="large-visualization"></div>
+                </div>
+                <div id="player-left-bottom">
+                    <div id="time-container">
+                        <span class="current-time">
+                            <span class="amplitude-current-minutes"></span>:<span
+                                class="amplitude-current-seconds"></span>
+                        </span>
+                        <div id="progress-container">
+                            <div class="amplitude-wave-form"></div>
+                            <div>
+                              <input type="range" class="amplitude-song-slider" />
+                              <progress id="song-played-progress" class="amplitude-song-played-progress"></progress>
+                              <progress id="song-buffered-progress" class="amplitude-buffered-progress" value="0"></progress>
+                            </div>
+                        </div>
+                        <span class="duration">
+                            <span class="amplitude-duration-minutes"></span>:<span
+                                class="amplitude-duration-seconds"></span>
+                        </span>
+                    </div>
+                    <div id="control-container">
+                        <div id="repeat-container">
+                            <div class="amplitude-repeat" id="repeat"></div>
+                            <div class="amplitude-shuffle amplitude-shuffle-off" id="shuffle"></div>
+                        </div>
+                        <div id="central-control-container">
+                            <div id="central-controls">
+                                <div class="amplitude-prev" id="previous"></div>
+                                <div class="amplitude-play-pause" id="play-pause"></div>
+                                <div class="amplitude-next" id="next"></div>
+                            </div>
+                        </div>
+                        <div id="volume-container">
+                            <div class="volume-controls">
+                                <div class="amplitude-mute amplitude-not-muted"></div>
+                                <input type="range" class="amplitude-volume-slider" />
+                                <div class="ms-range-fix"></div>
+                            </div>
+                            <div class="amplitude-shuffle amplitude-shuffle-off" id="shuffle-right"></div>
+                        </div>
+                    </div>
+                    <div id="meta-container">
+                        <span data-amplitude-song-info="name" class="song-name"></span>
+                        <div class="song-artist-album">
+                            <span data-amplitude-song-info="artist"></span>
+                            <span data-amplitude-song-info="album"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="amplitude-right">
+                <div id="song-list"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="player/player.js"></script>
+    <script>
+        // Song data
+        initPlayer([
+            {
+                "name": "Character Demo",
+                "artist": "2020",
+                "album": "Shane McPartlin",
+                "url": "./CharacterDemo.mp3",
+                "cover_art_url": "sadstolfo render_cropped.png",
+                "duration": "1:18"
+            },
+            {
+                "name": "Commercial Demo",
+                "artist": "2020",
+                "album": "Shane McPartlin",
+                "url": "./CommercialDemo.mp3",
+                "cover_art_url": "squareAstolfoKun.png",
+                "duration": "1:26"
+            },
+        ])
+    </script>
+    <!-- End Amplitude Player -->
+</body>
+
+</html>
